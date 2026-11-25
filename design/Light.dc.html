@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Wood Expert Industry – Homepage light</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+*{box-sizing:border-box}
+a{color:#461D03;text-decoration:none}a:hover{color:#2B1102}
+.we{--bg:#FFFFFF;--g25:#FDFCF9;--g50:#F9F8F4;--g100:#F3F0E7;--g200:#E9E4D6;--line:#ECE8DD;--maro:#461D03;--maro2:#5C2A0B;--or:#F39438;--or50:#FEF4EA;--or100:#FDE3C8;--vd:#3FB353;--vd50:#ECF8EE;--ol:#A6A867;--cr:#E3DC95;--tx:#461D03;--tx2:#6B4A35;--mut:#7A5E4B;--sh-xs:0 1px 2px rgba(70,29,3,.06);--sh-sm:0 1px 3px rgba(70,29,3,.08),0 1px 2px rgba(70,29,3,.05);--sh-lg:0 12px 16px -4px rgba(70,29,3,.08),0 4px 6px -2px rgba(70,29,3,.04);--sh-xl:0 24px 48px -12px rgba(70,29,3,.18);font-family:"Inter Tight",system-ui,Arial,sans-serif;color:var(--tx);background:var(--bg);line-height:1.55;overflow-x:hidden;position:relative}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--maro);background:var(--bg);border:1px solid var(--g200);box-shadow:var(--sh-xs);padding:4px 12px 4px 6px;border-radius:999px}
+.eyebrow:before{content:"";width:8px;height:8px;margin-left:4px;background:var(--or);border-radius:50%;box-shadow:0 0 0 3px var(--or100)}
+.h2{font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-.03em;font-weight:700;margin:16px 0 0;color:var(--tx)}
+.h2 em{font-style:normal;color:var(--tx2)}
+.lead{color:var(--mut);font-size:18px;max-width:640px;margin:16px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:10px;font:600 15px/1 "Inter Tight",system-ui,sans-serif;cursor:pointer;border:1px solid transparent;transition:background .15s,box-shadow .15s,border-color .15s;white-space:nowrap}
+.btn-or{background:var(--maro);color:#FFFFFF;border-color:var(--maro);box-shadow:var(--sh-xs),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 -2px 0 rgba(0,0,0,.18)}
+.btn-or:hover{background:var(--maro2);color:#FFFFFF}
+.btn-or:focus-visible,.btn-ghost:focus-visible{outline:none;box-shadow:0 0 0 4px var(--or100)}
+.btn-ghost{background:#FFFFFF;color:var(--tx);border-color:var(--g200);box-shadow:var(--sh-xs),inset 0 -2px 0 rgba(70,29,3,.05)}
+.btn-ghost:hover{background:var(--g50);color:var(--tx)}
+.btn-acc{background:var(--or);color:var(--maro);border-color:#E58325;box-shadow:var(--sh-xs),inset 0 -2px 0 rgba(70,29,3,.12)}
+.btn-acc:hover{background:#F7A452;color:var(--maro)}
+.icon{width:18px;height:18px;flex:none}
+section{position:relative}
+.sec{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
+
+/* top bar = announcement */
+.topbar{background:var(--maro);color:var(--cr);font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:44px;gap:16px}
+.topbar a{color:var(--cr);font-weight:500}.topbar a:hover{color:#FFFFFF}
+.tb-left{display:flex;gap:16px;align-items:center}
+.tb-dot{width:7px;height:7px;border-radius:50%;background:var(--vd);display:inline-block;margin-right:8px}
+.tb-right{display:flex;gap:20px;align-items:center}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:24px;min-height:72px}
+.logo{display:flex;align-items:center;flex:none}
+.logo img{height:36px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-btn{display:inline-flex;align-items:center;gap:4px;height:40px;padding:0 12px;border-radius:8px;background:none;border:0;color:var(--tx2);font:600 15px "Inter Tight",system-ui,sans-serif;cursor:pointer;transition:background .15s,color .15s}
+.nav-btn:hover,.nav-btn.on{background:var(--g50);color:var(--tx)}
+.nav-btn svg{width:16px;height:16px;color:var(--mut);transition:transform .2s}
+.nav-btn.on svg{transform:rotate(180deg)}
+.hdr-act{display:flex;align-items:center;gap:8px;flex:none}
+.ico-btn{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;border:1px solid var(--g200);color:var(--tx2);cursor:pointer;box-shadow:var(--sh-xs)}
+.ico-btn:hover{background:var(--g50);color:var(--tx)}
+.burger{display:none}
+.mega{position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-bottom:1px solid var(--line);box-shadow:var(--sh-xl);animation:drop .2s ease}
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mega-in{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;padding:32px 32px 36px}
+.mega-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 16px;align-content:start}
+.mega-title{grid-column:1/-1;font-size:14px;color:var(--or);font-weight:700;margin-bottom:10px;filter:brightness(.72)}
+.mega-link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;border-radius:8px;color:var(--tx);font-size:15px;font-weight:600;transition:background .15s}
+.mega-link:hover{background:var(--g50);color:var(--tx)}
+.mega-link span{font-size:12px;color:var(--tx2);font-weight:600;background:var(--g50);border:1px solid var(--g200);padding:2px 8px;border-radius:999px}
+.mega-feat{position:relative;border-radius:16px;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;background:var(--g50);border:1px solid var(--line)}
+.mega-feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mega-feat:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(70,29,3,0) 30%,rgba(43,17,2,.85))}
+.mega-feat>*:not(img){position:relative;z-index:1}
+.mega-feat b{font-size:20px;letter-spacing:-.02em;line-height:1.2;color:#FFFFFF}
+.mega-feat small{color:var(--cr);font-size:13px;margin-top:6px}
+
+/* mobile drawer */
+.drawer{position:fixed;inset:0;z-index:80;background:rgba(43,17,2,.35);backdrop-filter:blur(4px)}
+.drawer-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:#FFFFFF;border-left:1px solid var(--line);padding:20px 20px 32px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;animation:slide .25s ease;box-shadow:var(--sh-xl)}
+@keyframes slide{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+.dr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.dr-link{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);color:var(--tx);font-size:17px;font-weight:600}
+.dr-sub{display:flex;flex-direction:column;padding:4px 0 12px 8px}
+.dr-sub a{color:var(--tx2);padding:9px 0;font-size:15px}
+
+/* hero (split) */
+.hero{position:relative;padding:72px 0 88px;overflow:hidden;isolation:isolate;background:radial-gradient(1000px 500px at 85% 0%,var(--or50),transparent 70%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 70% at 30% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 30% 30%,#000 30%,transparent 75%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center;width:100%}
+.hero h1{font-size:clamp(40px,5.2vw,72px);line-height:1.02;letter-spacing:-.04em;font-weight:700;margin:20px 0 0;color:var(--tx)}
+.hero h1 em{font-style:normal;color:var(--or);filter:brightness(.82)}
+.hero .lead{font-size:19px;max-width:560px}
+.hero-ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.hero-ctas .btn{min-height:52px;padding:0 22px;font-size:16px}
+.slide-txt{animation:rise .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.dots{display:flex;gap:8px;margin-top:48px;align-items:center;padding:6px;border:1px solid var(--g200);border-radius:14px;background:#FFFFFF;box-shadow:var(--sh-xs);width:max-content;max-width:100%}
+.dot{position:relative;height:44px;display:flex;flex-direction:column;justify-content:center;gap:6px;width:130px;background:none;border:0;padding:0 12px;border-radius:10px;cursor:pointer;text-align:left;color:var(--mut);font:600 13px "Inter Tight",system-ui,sans-serif}
+.dot i{display:block;height:3px;border-radius:3px;background:var(--g100);overflow:hidden;position:relative}
+.dot i:after{content:"";position:absolute;inset:0;width:0;background:var(--maro)}
+.dot.on{color:var(--tx);background:var(--g50)}
+.dot.on i:after{animation:prog 6.5s linear forwards}
+@keyframes prog{to{width:100%}}
+.hero-vis{position:relative}
+.hero-bg{position:relative;aspect-ratio:5/4;border-radius:24px;overflow:hidden;background:var(--g100);border:1px solid var(--g200);box-shadow:var(--sh-xl);outline:8px solid rgba(255,255,255,.7);outline-offset:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s ease,transform 7s ease}
+.hero-bg img.on{opacity:1;transform:scale(1)}
+.glass{background:#FFFFFF;border:1px solid var(--g200);border-radius:16px;padding:18px;box-shadow:var(--sh-xl)}
+.expert-card{position:absolute;left:-40px;bottom:-36px;width:320px}
+.expert-card h4{margin:0;font-size:16px;letter-spacing:-.01em}
+.expert-card p{margin:4px 0 10px;color:var(--mut);font-size:13px}
+.expert-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.av{width:36px;height:36px;border-radius:50%;background:var(--g50);color:var(--maro);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none;border:1px solid var(--g200);box-shadow:inset 0 0 0 2px #FFFFFF}
+.expert-row b{display:block;font-size:14px;font-weight:600}
+.expert-row small{display:block;color:var(--mut);font-size:12px}
+.expert-row a{margin-left:auto;width:44px;height:44px;border-radius:10px;background:var(--vd50);color:#23812F;display:flex;align-items:center;justify-content:center;flex:none;border:1px solid #CDEBD3}
+.expert-row a:hover{background:var(--vd);color:var(--maro)}
+.hero-float{position:absolute;right:-20px;top:28px;display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px}
+.hero-float .fi{width:44px;height:44px;border-radius:50%;background:var(--or50);color:var(--maro);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px #FFF7EF}
+.hero-float b{display:block;font-size:22px;letter-spacing:-.03em;line-height:1}
+.hero-float small{display:block;color:var(--mut);font-size:12px;margin-top:3px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:20px;background:#FFFFFF;overflow:hidden;box-shadow:var(--sh-sm)}
+.stat{padding:32px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(36px,4vw,56px);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--maro)}
+.stat span{display:block;margin-top:10px;color:var(--mut);font-size:15px;max-width:200px}
+
+/* marquee */
+.clients{padding:64px 0 0}
+.clients p{text-align:center;color:var(--mut);font-size:15px;font-weight:500;margin:0 0 28px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq-track{display:flex;gap:64px;width:max-content;animation:mq 38s linear infinite;align-items:center}
+.mq-track img{height:32px;width:auto;filter:brightness(0);opacity:.42;transition:opacity .2s}
+.mq-track img:hover{opacity:.85}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* solutions */
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:12px;background:var(--g50);border:1px solid var(--g200);flex-wrap:wrap}
+.tab{height:44px;padding:0 16px;border-radius:8px;border:0;background:none;color:var(--mut);font:600 15px "Inter Tight",system-ui,sans-serif;cursor:pointer;transition:all .15s}
+.tab:hover{color:var(--tx)}
+.tab.on{background:#FFFFFF;color:var(--tx);box-shadow:var(--sh-sm)}
+.sol{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px}
+.sol-feat{position:relative;border-radius:20px;overflow:hidden;min-height:540px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;border:1px solid var(--g200);box-shadow:var(--sh-lg)}
+.sol-feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.sol-feat:hover img{transform:scale(1.04)}
+.sol-feat:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,17,2,0) 35%,rgba(43,17,2,.9))}
+.sol-feat>*:not(img){position:relative;z-index:1}
+.sol-feat h3{font-size:30px;line-height:1.1;letter-spacing:-.03em;margin:12px 0 10px;color:#FFFFFF}
+.sol-feat p{color:rgba(255,255,255,.85);margin:0 0 22px;max-width:420px}
+.sol-feat .btn-or{background:#FFFFFF;color:var(--maro);border-color:#FFFFFF}
+.chip{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:#FFFFFF;border:1px solid var(--g200);color:var(--maro);box-shadow:var(--sh-xs)}
+.cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
+.cat{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:14px;background:#FFFFFF;border:1px solid var(--line);color:var(--tx);transition:all .2s;min-height:84px;box-shadow:var(--sh-xs)}
+.cat:hover{border-color:var(--g200);box-shadow:var(--sh-lg);color:var(--tx);transform:translateY(-1px)}
+.cat-ic{width:44px;height:44px;border-radius:10px;background:#FFFFFF;border:1px solid var(--g200);color:var(--maro);display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-xs)}
+.cat:hover .cat-ic{background:var(--or50);border-color:var(--or100)}
+.cat b{font-size:16px;font-weight:600;line-height:1.25;display:block}
+.cat small{color:var(--mut);font-size:13px;font-weight:500}
+.cat .arr{margin-left:auto;color:var(--g200);transition:transform .2s,color .2s;flex:none}
+.cat:hover .arr{transform:translateX(3px);color:var(--maro)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border:1px solid var(--line);border-radius:20px;padding:32px;position:relative;overflow:hidden;box-shadow:var(--sh-sm)}
+.card h3{font-size:24px;line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+.card p{color:var(--mut);margin:0}
+.b-service{grid-column:span 7;min-height:380px;display:flex;flex-direction:column;justify-content:space-between;background:var(--maro);border-color:var(--maro);color:#FFFFFF}
+.b-service .eyebrow{background:rgba(255,255,255,.08);border-color:rgba(227,220,149,.25);color:var(--cr);box-shadow:none}
+.b-service .big{font-size:clamp(90px,10vw,150px);font-weight:700;letter-spacing:-.06em;line-height:.85;color:var(--cr)}
+.b-service .big sup{font-size:.4em;color:var(--or);vertical-align:top;margin-left:4px}
+.b-service h3{color:#FFFFFF}
+.b-service .bg-ic{position:absolute;right:-60px;top:-60px;width:340px;opacity:.07;filter:brightness(0) invert(1)}
+.b-stock{grid-column:span 5;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,var(--vd50),#FFFFFF 60%)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--vd50);color:#1E6E29;border:1px solid #BFE5C6;align-self:flex-start}
+.b-incl{grid-column:span 5}
+.incl{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column}
+.incl li{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-weight:500}
+.incl li svg{color:#23812F;background:var(--vd50);border-radius:50%;padding:3px;width:24px;height:24px}
+.b-fin{grid-column:span 4}
+.fin{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.fin span{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:12px;background:var(--g50);border:1px solid var(--line);font-weight:600}
+.fin span small{color:var(--mut);font-weight:600}
+.b-fact{grid-column:span 3;display:flex;flex-direction:column;justify-content:space-between;background:var(--or50);border-color:var(--or100)}
+.b-fact b{font-size:64px;font-weight:700;letter-spacing:-.05em;line-height:1;color:var(--maro)}
+.b-fact p{color:var(--maro)}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pc{display:flex;flex-direction:column;color:var(--tx);border-radius:16px;overflow:hidden;background:#FFFFFF;transition:transform .25s}
+.pc:hover{color:var(--tx);transform:translateY(-3px)}
+.pc-img{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:16px;border:1px solid var(--line)}
+.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-img .chip{position:absolute;left:14px;top:14px}
+.pc-body{padding:18px 2px 8px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pc-body h3{margin:0;font-size:19px;line-height:1.3;letter-spacing:-.015em;font-weight:600}
+.pc-meta{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:14px;margin-top:auto}
+.pc-meta svg{color:var(--or);filter:brightness(.8)}
+
+/* producers */
+.prod-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pd{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;border-radius:16px;background:#FFFFFF;border:1px solid var(--line);min-height:190px;color:var(--tx);transition:all .2s;box-shadow:var(--sh-xs)}
+.pd:hover{border-color:var(--g200);box-shadow:var(--sh-lg);color:var(--tx)}
+.pd img{height:32px;width:auto;max-width:160px;object-fit:contain;object-position:left center;filter:brightness(0);opacity:.78}
+.pd b{display:block;font-size:15px;font-weight:600}
+.pd small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+.pd-nx{grid-column:span 2;grid-row:span 2;background:var(--maro);border-color:var(--maro);color:#FFFFFF;padding:36px}
+.pd-nx:hover{color:#FFFFFF}
+.pd-nx img{height:52px;max-width:240px;filter:none;opacity:1}
+.pd-nx h3{font-size:30px;line-height:1.1;letter-spacing:-.03em;margin:0 0 10px}
+.pd-nx p{color:rgba(255,255,255,.8);margin:0 0 22px;max-width:440px}
+.pd-nx .chip{background:rgba(255,255,255,.08);border-color:rgba(227,220,149,.3);color:var(--cr);box-shadow:none}
+.pd-tags{display:flex;gap:8px;flex-wrap:wrap}
+.pd-tags span{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid rgba(227,220,149,.3);color:var(--cr)}
+.pd-all{background:var(--g50);border-style:dashed;justify-content:center;align-items:flex-start;box-shadow:none}
+.pd-all small{color:var(--maro);font-weight:600}
+
+/* resources */
+.res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rc{display:flex;gap:16px;align-items:center;padding:20px;border-radius:16px;border:1px solid var(--line);background:#FFFFFF;color:var(--tx);transition:all .2s;box-shadow:var(--sh-xs)}
+.rc:hover{box-shadow:var(--sh-lg);color:var(--tx)}
+.rc-ic{width:40px;height:48px;border-radius:6px;background:#FFFFFF;border:1.5px solid var(--g200);display:flex;align-items:flex-end;padding:0;flex:none;position:relative;font-size:0}
+.rc-ic:after{content:"PDF";position:absolute;left:-6px;bottom:7px;font-size:10px;font-weight:700;color:#FFFFFF;background:#B4361B;padding:2px 4px;border-radius:3px}
+.rc b{display:block;font-size:16px;font-weight:600;line-height:1.25}
+.rc small{display:block;color:var(--mut);font-size:13px;margin-top:3px}
+.rc .dl{margin-left:auto;width:44px;height:44px;border-radius:10px;border:1px solid var(--g200);display:flex;align-items:center;justify-content:center;color:var(--tx2);flex:none;box-shadow:var(--sh-xs)}
+
+/* regions + faq */
+.band{background:var(--g50);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.reg-list{display:flex;flex-direction:column;gap:8px;margin-top:28px}
+.reg{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px 18px;border-radius:14px;background:#FFFFFF;border:1px solid var(--line);color:var(--tx);font:inherit;cursor:pointer;transition:all .15s;box-shadow:var(--sh-xs)}
+.reg:hover{border-color:var(--g200)}
+.reg.on{border-color:var(--maro);box-shadow:0 0 0 1px var(--maro),var(--sh-sm)}
+.reg .num{font-size:13px;font-weight:700;color:var(--mut);width:28px}
+.reg.on .num{color:var(--maro)}
+.reg b{font-size:16px;font-weight:600;display:block}
+.reg small{color:var(--mut);font-size:13px}
+.reg-card{border-radius:20px;background:#FFFFFF;border:1px solid var(--line);padding:36px;display:flex;flex-direction:column;gap:24px;height:100%;box-shadow:var(--sh-lg)}
+.reg-person{display:flex;align-items:center;gap:16px}
+.reg-person .av{width:64px;height:64px;font-size:20px}
+.reg-person b{font-size:22px;letter-spacing:-.02em;display:block}
+.reg-person small{color:var(--or);filter:brightness(.75);font-weight:700;font-size:14px}
+.reg-role{color:var(--mut);font-size:14px}
+.reg-lbl{font-size:13px;color:var(--mut);font-weight:600;margin-bottom:10px}
+.counties{display:flex;flex-wrap:wrap;gap:6px}
+.counties span{font-size:13px;font-weight:500;padding:3px 10px;border-radius:999px;background:var(--g50);border:1px solid var(--g200);color:var(--tx2)}
+.reg-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.faq{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.fq{border-bottom:1px solid var(--line)}
+.fq button{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:22px 0;background:none;border:0;color:var(--tx);font:600 17px "Inter Tight",system-ui,sans-serif;text-align:left;cursor:pointer;min-height:44px}
+.fq button i{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--g200);display:flex;align-items:center;justify-content:center;flex:none;font-style:normal;color:var(--mut);transition:transform .25s}
+.fq.on button i{transform:rotate(45deg);border-color:var(--maro);color:var(--maro)}
+.fq p{margin:-6px 0 0;padding:0 48px 22px 0;color:var(--mut);animation:rise .3s ease}
+
+/* cta */
+.cta{border-radius:24px;background:var(--maro);padding:64px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center;overflow:hidden;position:relative;color:#FFFFFF;box-shadow:var(--sh-xl)}
+.cta .bg-ic{position:absolute;left:-80px;bottom:-120px;width:420px;opacity:.06;filter:brightness(0) invert(1)}
+.cta .eyebrow{background:rgba(255,255,255,.08);border-color:rgba(227,220,149,.25);color:var(--cr);box-shadow:none}
+.cta h2{font-size:clamp(32px,3.6vw,48px);line-height:1.08;letter-spacing:-.03em;margin:16px 0 14px;position:relative;color:#FFFFFF}
+.cta h2 em{font-style:normal;color:var(--or)}
+.cta p{color:rgba(255,255,255,.8);margin:0;position:relative}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;position:relative;background:#FFFFFF;border-radius:16px;padding:24px;box-shadow:var(--sh-xl)}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:14px;color:var(--tx2);font-weight:600}
+.fld input,.fld select{height:46px;border-radius:10px;border:1px solid var(--g200);background:#FFFFFF;color:var(--tx);padding:0 14px;font:500 15px "Inter Tight",system-ui,sans-serif;outline:none;box-shadow:var(--sh-xs)}
+.fld input:focus,.fld select:focus{border-color:var(--or);box-shadow:0 0 0 4px var(--or100)}
+.fld input::placeholder{color:#A08A7B}
+.form .btn{grid-column:1/-1;height:50px}
+.form small{grid-column:1/-1;color:var(--mut);font-size:12px}
+
+/* footer */
+.ft{margin-top:96px;border-top:1px solid var(--line);background:var(--g50)}
+.ft-top{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(4,minmax(0,1fr));gap:40px;padding:64px 0 48px}
+.ft-brand img{height:42px;width:auto}
+.ft-brand p{color:var(--mut);font-size:15px;margin:18px 0 22px;max-width:320px}
+.nl-lbl{font-size:14px;color:var(--tx);font-weight:600;margin-bottom:8px}
+.nl{display:flex;gap:8px;max-width:380px}
+.nl input{flex:1;min-width:0;background:#FFFFFF;border:1px solid var(--g200);border-radius:10px;color:var(--tx);padding:0 14px;font:500 14px "Inter Tight",system-ui,sans-serif;outline:none;height:44px;box-shadow:var(--sh-xs)}
+.nl input:focus{border-color:var(--or);box-shadow:0 0 0 4px var(--or100)}
+.nl input::placeholder{color:#A08A7B}
+.nl .btn{min-height:44px;padding:0 16px;font-size:14px}
+.ft h5{font-size:14px;color:var(--mut);margin:4px 0 16px;font-weight:600}
+.ft ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.ft ul a{color:var(--tx2);font-size:15px;font-weight:500}.ft ul a:hover{color:var(--tx)}
+.ft-contact li{display:flex;gap:10px;color:var(--tx2);font-size:14px}
+.ft-contact svg{color:var(--mut);margin-top:2px}
+.ft-mid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:24px 0;border-top:1px solid var(--g200)}
+.soc{display:flex;gap:8px}
+.soc a{width:44px;height:44px;border-radius:10px;border:1px solid var(--g200);background:#FFFFFF;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;font-weight:700;box-shadow:var(--sh-xs)}
+.soc a:hover{color:#FFFFFF;background:var(--maro);border-color:var(--maro)}
+.anpc{display:flex;gap:8px;flex-wrap:wrap}
+.anpc a{font-size:12px;color:var(--tx2);padding:10px 12px;border-radius:8px;border:1px solid var(--g200);background:#FFFFFF}
+.ft-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:24px 0 36px;border-top:1px solid var(--g200);color:var(--mut);font-size:14px}
+.ft-bot nav{display:flex;gap:20px;flex-wrap:wrap}
+.ft-bot a{color:var(--mut)}
+.ft-word{font-size:clamp(60px,15vw,210px);font-weight:800;letter-spacing:-.06em;line-height:.8;color:transparent;-webkit-text-stroke:1px var(--g200);text-align:center;padding:16px 0 0;white-space:nowrap;overflow:hidden;user-select:none}
+
+/* floating */
+.fab{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 6px;border-radius:999px;background:#FFFFFF;color:var(--tx);font-weight:600;font-size:15px;border:1px solid var(--g200);box-shadow:var(--sh-xl)}
+.fab span.ic{width:40px;height:40px;border-radius:50%;background:var(--vd);color:var(--maro);display:flex;align-items:center;justify-content:center}
+.fab:hover{color:var(--tx);background:var(--g50)}
+
+/* responsive */
+@media (max-width:1180px){
+.nav{display:none}.burger{display:inline-flex}.hdr-act .btn-or{display:none}
+.hero-grid{grid-template-columns:minmax(0,1fr)}.expert-card{left:16px;bottom:-28px}
+.sol{grid-template-columns:minmax(0,1fr)}.sol-feat{min-height:380px}
+.b-service,.b-stock,.b-incl,.b-fin,.b-fact{grid-column:span 6}
+.proj{grid-template-columns:repeat(2,minmax(0,1fr))}
+.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ft-top{grid-template-columns:repeat(2,minmax(0,1fr))}.ft-brand{grid-column:1/-1}
+.cta{grid-template-columns:minmax(0,1fr);padding:48px}
+}
+@media (max-width:760px){
+.wrap{padding:0 20px}
+.topbar .tb-left span.hide,.tb-right .hide{display:none}
+.hdr-in{min-height:64px}.logo img{height:30px}
+.hero{padding:40px 0 64px}.hero .lead{font-size:17px}
+.dots{margin-top:32px;width:100%}.dot{width:auto;flex:1;padding:0 8px}
+.hero-float{right:10px;top:14px}
+.expert-card{position:relative;left:auto;bottom:auto;width:auto;margin-top:16px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:22px 18px;border-bottom:1px solid var(--line)}.stat:nth-child(2n){border-right:0}
+.sec{padding:72px 0}.sec-head{margin-bottom:32px}
+.cats{grid-template-columns:minmax(0,1fr)}
+.bento{grid-template-columns:minmax(0,1fr)}.b-service,.b-stock,.b-incl,.b-fin,.b-fact{grid-column:auto}.card{padding:24px}
+.proj,.res,.two{grid-template-columns:minmax(0,1fr)}
+.pd-nx{grid-column:1/-1;grid-row:auto;padding:24px}.pd{padding:18px;min-height:140px}
+.cta{padding:32px 20px;border-radius:20px}.form{grid-template-columns:minmax(0,1fr);padding:18px}
+.ft-top{grid-template-columns:minmax(0,1fr);padding:48px 0 32px}
+.fab b{display:none}.fab{padding:0 5px;width:52px;justify-content:center}
+}
+</style>
+</helmet>
+<div class="we">
+
+<!-- TOP BAR -->
+<div class="topbar">
+<div class="wrap">
+<div class="tb-left">
+<span><i class="tb-dot"></i>BIFE-SIM 2026: peste 10 utilaje Nanxing testate live</span>
+<a class="hide" href="#montaje" style="text-decoration:underline">Citește articolul →</a>
+</div>
+<div class="tb-right">
+<a href="tel:0732672147">0732.672.147</a>
+<a class="hide" href="mailto:office@woodexpert.ro">office@woodexpert.ro</a>
+<a class="hide" href="#">Zonă clienți</a>
+</div>
+</div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr" onMouseLeave="{{closeMenu}}">
+<div class="wrap hdr-in">
+<a class="logo" href="#" aria-label="Wood Expert Industry – acasă"><img src="/_blob/2f25c7f1394004c1cfdac82d1289479d" alt="Wood Expert – Limitless technology"></a>
+<nav class="nav" aria-label="Meniu principal">
+<sc-for list="{{navItems}}" as="n" hint-placeholder-count="3">
+<button class="{{n.cls}}" onMouseEnter="{{n.open}}" onClick="{{n.open}}" aria-expanded="{{n.expanded}}">{{n.label}}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+</sc-for>
+<a class="nav-btn" href="#" onMouseEnter="{{closeMenu}}">Utilaje în stoc</a>
+<a class="nav-btn" href="#producatori" onMouseEnter="{{closeMenu}}">Producători</a>
+<a class="nav-btn" href="#montaje" onMouseEnter="{{closeMenu}}">Noutăți</a>
+<a class="nav-btn" href="#contact" onMouseEnter="{{closeMenu}}">Contact</a>
+</nav>
+<div class="hdr-act">
+<button class="ico-btn" aria-label="Caută utilaje"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></button>
+<a class="btn btn-or" href="#contact">Cere ofertă<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<button class="ico-btn burger" aria-label="Deschide meniul" onClick="{{openDrawer}}"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path></svg></button>
+</div>
+</div>
+
+<sc-if value="{{megaOpen}}" hint-placeholder-val="{{ false }}">
+<div class="mega">
+<div class="wrap mega-in">
+<div class="mega-list">
+<div class="mega-title">{{megaTitle}}</div>
+<sc-for list="{{megaCats}}" as="c" hint-placeholder-count="9">
+<a class="mega-link" href="#">{{c.t}}<span>{{c.n}}</span></a>
+</sc-for>
+</div>
+<a class="mega-feat" href="#">
+<img src="{{megaImg}}" alt="">
+<span class="chip">{{megaChip}}</span>
+<b style="margin-top:14px">{{megaFeat}}</b>
+<small>Vezi soluția completă →</small>
+</a>
+</div>
+</div>
+</sc-if>
+</header>
+
+<!-- MOBILE DRAWER -->
+<sc-if value="{{drawerOpen}}" hint-placeholder-val="{{ false }}">
+<div class="drawer">
+<div class="drawer-in">
+<div class="dr-top">
+<img src="/_blob/2f25c7f1394004c1cfdac82d1289479d" alt="Wood Expert" style="height:28px;width:auto">
+<button class="ico-btn" aria-label="Închide meniul" onClick="{{closeDrawer}}"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
+</div>
+<sc-for list="{{drawerItems}}" as="d" hint-placeholder-count="3">
+<div>
+<button class="dr-link" style="width:100%;background:none;border:0;border-bottom:1px solid #ECE8DD;cursor:pointer;font-family:inherit" onClick="{{d.toggle}}">{{d.label}}<span style="color:#461D03">{{d.sign}}</span></button>
+<sc-if value="{{d.open}}" hint-placeholder-val="{{ false }}">
+<div class="dr-sub">
+<sc-for list="{{d.cats}}" as="c" hint-placeholder-count="5"><a href="#">{{c.t}} <span style="color:#7A5E4B">· {{c.n}}</span></a></sc-for>
+</div>
+</sc-if>
+</div>
+</sc-for>
+<a class="dr-link" href="#">Utilaje în stoc</a>
+<a class="dr-link" href="#producatori">Producători</a>
+<a class="dr-link" href="#montaje">Noutăți și montaje</a>
+<a class="dr-link" href="#contact">Contact</a>
+<a class="btn btn-or" href="#contact" style="margin-top:20px">Cere ofertă</a>
+<a class="btn btn-ghost" href="tel:0732672147">Sună: 0732.672.147</a>
+</div>
+</div>
+</sc-if>
+
+<!-- HERO -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="1">
+<sc-if value="{{s.on}}" hint-placeholder-val="{{ true }}">
+<div class="slide-txt">
+<span class="eyebrow">{{s.eyebrow}}</span>
+<h1>{{s.t1}} <em>{{s.t2}}</em></h1>
+<p class="lead">{{s.lead}}</p>
+<div class="hero-ctas">
+<a class="btn btn-or" href="#contact">{{s.cta}}<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="#montaje">{{s.cta2}}</a>
+</div>
+</div>
+</sc-if>
+</sc-for>
+<div class="dots">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="3">
+<button class="{{s.dotCls}}" onClick="{{s.pick}}" aria-label="Slide {{s.idx}}"><span>{{s.idx}} · {{s.short}}</span><i></i></button>
+</sc-for>
+</div>
+</div>
+<div class="hero-vis">
+<div class="hero-bg">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="3"><img class="{{s.imgCls}}" src="{{s.img}}" alt=""></sc-for>
+</div>
+<div class="glass hero-float"><span class="fi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"></path></svg></span><div><b>50+</b><small>fabrici complete echipate</small></div></div>
+<div class="glass expert-card">
+<h4>Vorbește cu un expert</h4>
+<p>Un consultant din zona ta îți răspunde în aceeași zi.</p>
+<sc-for list="{{experts}}" as="e" hint-placeholder-count="4">
+<div class="expert-row">
+<span class="av">{{e.ini}}</span>
+<div><b>{{e.name}}</b><small>{{e.zone}}</small></div>
+<a href="tel:{{e.tel}}" aria-label="Sună-l pe {{e.name}}"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></a>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STATS + CLIENTS -->
+<section>
+<div class="wrap">
+<div class="stats">
+<div class="stat"><b>20+</b><span>ani de experiență în prelucrarea lemnului</span></div>
+<div class="stat"><b>25+</b><span>tehnicieni și ingineri de service</span></div>
+<div class="stat"><b>2000+</b><span>utilaje în portofoliu</span></div>
+<div class="stat"><b>500+</b><span>proiecte complete livrate</span></div>
+</div>
+</div>
+<div class="clients">
+<p>Fabricile care au ales Wood Expert</p>
+<div class="marquee"><div class="mq-track">
+<sc-for list="{{clientsLoop}}" as="c" hint-placeholder-count="10"><img src="{{c.src}}" alt="{{c.alt}}"></sc-for>
+</div></div>
+</div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="sec" id="utilaje">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Utilaje și linii complete</span>
+<h2 class="h2">De la buștean <em>la mobila finită.</em></h2>
+</div>
+<div class="tabs" role="tablist">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3"><button class="{{t.cls}}" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}">{{t.label}}</button></sc-for>
+</div>
+</div>
+<div class="sol">
+<a class="sol-feat" href="#">
+<img src="{{solImg}}" alt="">
+<span class="chip">{{solChip}}</span>
+<h3>{{solTitle}}</h3>
+<p>{{solText}}</p>
+<span class="btn btn-or" style="align-self:flex-start">Vezi toată gama<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<div class="cats">
+<sc-for list="{{solCats}}" as="c" hint-placeholder-count="8">
+<a class="cat" href="#">
+<span class="cat-ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 4v2M12 18v2M4 12h2M18 12h2"></path></svg></span>
+<span><b>{{c.t}}</b><small>{{c.n}} utilaje</small></span>
+<svg class="icon arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WHY / BENTO -->
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">De ce Wood Expert</span>
+<h2 class="h2">Nu vindem utilaje. <em>Punem fabrici în funcțiune.</em></h2>
+</div>
+<p class="lead" style="margin:0;max-width:440px">Din 2005 am echipat peste 50 de fabrici complete de cherestea și sute de ateliere de mobilă. Rămânem lângă tine și după montaj.</p>
+</div>
+<div class="bento">
+<div class="card b-service">
+<img class="bg-ic" src="/_blob/cfb798644f0ea7ae4fc611cb7256e3e3" alt="" aria-hidden="true">
+<div><span class="eyebrow">Service premium</span></div>
+<div>
+<div class="big">25<sup>+</sup></div>
+<h3 style="margin-top:20px">Cea mai mare echipă de service din domeniu, în România</h3>
+<p style="color:rgba(249,249,249,.78)">Tehnicieni și ingineri care montează, pun în funcțiune și întrețin utilajele, inclusiv în post-garanție.</p>
+</div>
+</div>
+<div class="card b-stock">
+<span class="badge">● În stoc</span>
+<div>
+<h3>Utilaje disponibile imediat</h3>
+<p>Utilaje noi cu garanție și utilaje second hand recondiționate, gata de livrare.</p>
+</div>
+<a class="btn btn-ghost" href="#" style="align-self:flex-start">Vezi utilajele în stoc</a>
+</div>
+<div class="card b-incl">
+<h3>Inclus în fiecare proiect</h3>
+<ul class="incl">
+<sc-for list="{{included}}" as="i" hint-placeholder-count="5"><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>{{i}}</li></sc-for>
+</ul>
+</div>
+<div class="card b-fin">
+<h3>Finanțare flexibilă</h3>
+<p>Alegi varianta potrivită pentru investiția ta.</p>
+<div class="fin">
+<span>Leasing <small>→</small></span>
+<span>Fonduri europene <small>→</small></span>
+<span>Surse proprii <small>→</small></span>
+</div>
+</div>
+<div class="card b-fact">
+<b>50+</b>
+<p style="font-weight:600;font-size:18px;line-height:1.3">fabrici complete de cherestea echipate. Lider în prelucrarea primară.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec" id="montaje" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Montaje și noutăți</span>
+<h2 class="h2">Proiecte reale, <em>în fabrici reale.</em></h2>
+</div>
+<a class="btn btn-ghost" href="#">Toate montajele<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="proj">
+<sc-for list="{{projects}}" as="p" hint-placeholder-count="6">
+<a class="pc" href="#">
+<div class="pc-img"><img src="{{p.img}}" alt="{{p.t}}"><span class="chip">{{p.tag}}</span></div>
+<div class="pc-body">
+<h3>{{p.t}}</h3>
+<div class="pc-meta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>{{p.loc}}</div>
+</div>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- PRODUCERS -->
+<section class="sec" id="producatori" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Producători în exclusivitate</span>
+<h2 class="h2">Branduri de top. <em>Un singur partener.</em></h2>
+</div>
+<a class="btn btn-ghost" href="#">Toți producătorii</a>
+</div>
+<div class="prod-grid">
+<a class="pd pd-nx" href="#">
+<img src="/_blob/17668cc1d741cf1449c1567a142505e0" alt="Nanxing">
+<div>
+<span class="chip" style="margin-bottom:18px">Partener exclusiv în România</span>
+<h3>Linii complete pentru fabrici de mobilă PAL și MDF</h3>
+<p>Circulare de formatizat, mașini de aplicat cant, CNC de găurit pe 6 laturi, CNC nesting și celule robotizate, montate și puse în funcțiune de echipa Wood Expert.</p>
+<div class="pd-tags"><span>Mașini de aplicat cant</span><span>CNC nesting</span><span>Găurire pe 6 laturi</span><span>Formatizare</span></div>
+</div>
+</a>
+<sc-for list="{{producers}}" as="p" hint-placeholder-count="7">
+<a class="pd" href="#"><img src="{{p.src}}" alt="{{p.name}}"><span><b>{{p.name}}</b><small>{{p.what}}</small></span></a>
+</sc-for>
+<a class="pd pd-all" href="#"><b style="font-size:20px;letter-spacing:-.02em">Lista completă A–Z</b><small>Toți producătorii →</small></a>
+</div>
+</div>
+</section>
+
+<!-- RESOURCES -->
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head" style="margin-bottom:32px">
+<div>
+<span class="eyebrow">Centru de resurse tehnice</span>
+<h2 class="h2" style="font-size:clamp(28px,3vw,40px)">Descarcă cataloagele</h2>
+</div>
+</div>
+<div class="res">
+<a class="rc" href="#"><span class="rc-ic">PDF</span><span><b>Catalog prelucrare primară</b><small>Linii de debitare, multilame, uscătoare</small></span><span class="dl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></span></a>
+<a class="rc" href="#"><span class="rc-ic">PDF</span><span><b>Catalog prelucrare secundară</b><small>Tâmplărie, prese, peleți, glulam și CLT</small></span><span class="dl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></span></a>
+<a class="rc" href="#"><span class="rc-ic">PDF</span><span><b>Catalog PAL / MDF Nanxing</b><small>Formatizare, cant, găurire, nesting</small></span><span class="dl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></span></a>
+</div>
+</div>
+</section>
+
+<!-- REGIONS + FAQ -->
+<section class="sec band" style="margin-bottom:96px">
+<div class="wrap two">
+<div>
+<span class="eyebrow">Acoperire națională</span>
+<h2 class="h2" style="font-size:clamp(30px,3.4vw,46px)">Un expert <em>lângă fabrica ta.</em></h2>
+<div class="reg-list">
+<sc-for list="{{regions}}" as="r" hint-placeholder-count="4">
+<button class="{{r.cls}}" onClick="{{r.pick}}"><span class="num">0{{r.idx}}</span><span><b>{{r.zone}}</b><small>{{r.name}}</small></span></button>
+</sc-for>
+</div>
+</div>
+<div class="reg-card">
+<div class="reg-person">
+<span class="av">{{reg.ini}}</span>
+<div><small>{{reg.zone}}</small><b>{{reg.name}}</b><span class="reg-role">Consultant vânzări</span></div>
+</div>
+<div>
+<div class="reg-lbl">Județe acoperite</div>
+<div class="counties"><sc-for list="{{reg.counties}}" as="c" hint-placeholder-count="10"><span>{{c}}</span></sc-for></div>
+</div>
+<div class="reg-ctas">
+<a class="btn btn-or" href="tel:{{reg.tel}}">Sună: {{reg.telLabel}}</a>
+<a class="btn btn-ghost" href="#">WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0">
+<div class="wrap two" style="align-items:start">
+<div>
+<span class="eyebrow">Întrebări frecvente</span>
+<h2 class="h2" style="font-size:clamp(30px,3.4vw,46px)">De ce clienții <em>aleg Wood Expert?</em></h2>
+<p class="lead">Răspunsuri scurte la ce ne întreabă cel mai des cei care pregătesc o investiție.</p>
+</div>
+<div class="faq">
+<sc-for list="{{faq}}" as="f" hint-placeholder-count="5">
+<div class="{{f.cls}}">
+<button onClick="{{f.toggle}}" aria-expanded="{{f.open}}">{{f.q}}<i>+</i></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}"><p>{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+<div class="wrap">
+<div class="cta">
+<img class="bg-ic" src="/_blob/cfb798644f0ea7ae4fc611cb7256e3e3" alt="" aria-hidden="true">
+<div>
+<span class="eyebrow">Cere ofertă</span>
+<h2>Spune-ne ce vrei să produci. <em>Noi configurăm linia.</em></h2>
+<p>Un consultant din zona ta te sună cu o propunere tehnică și de preț. Transportul, montajul și instruirea sunt incluse.</p>
+</div>
+<form class="form" onSubmit="{{noSubmit}}">
+<div class="fld"><label for="f-nume">Nume</label><input id="f-nume" placeholder="Numele tău"></div>
+<div class="fld"><label for="f-tel">Telefon</label><input id="f-tel" placeholder="07xx xxx xxx"></div>
+<div class="fld full"><label for="f-firma">Firmă</label><input id="f-firma" placeholder="Numele firmei"></div>
+<div class="fld full"><label for="f-tip">Ce te interesează?</label>
+<select id="f-tip"><option>Prelucrare primară (bușteni și cherestea)</option><option>Prelucrare secundară</option><option>Utilaje PAL / MDF Nanxing</option><option>Utilaje în stoc / second hand</option><option>Service și piese</option></select></div>
+<button class="btn btn-acc" type="submit">Trimite cererea<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<small>Datele tale sunt folosite doar pentru a-ți răspunde la cerere.</small>
+</form>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div class="ft-brand">
+<img src="/_blob/2f25c7f1394004c1cfdac82d1289479d" alt="Wood Expert – Limitless technology">
+<p>Principalul furnizor de utilaje pentru prelucrarea lemnului din România, din 2005.</p>
+<div class="nl-lbl">Newsletter: montaje, noutăți și utilaje în stoc</div>
+<form class="nl" onSubmit="{{noSubmit}}"><label for="nl-mail" style="position:absolute;left:-9999px">E-mail</label><input id="nl-mail" type="email" placeholder="Adresa ta de e-mail"><button class="btn btn-or" type="submit">Abonează-te</button></form>
+</div>
+<div>
+<h5>Prelucrare primară</h5>
+<ul><li><a href="#">Linii debitare bușteni</a></li><li><a href="#">Fierăstraie multilamă</a></li><li><a href="#">Optimizare și sortare cherestea</a></li><li><a href="#">Uscătoare cherestea</a></li><li><a href="#">Cazane industriale</a></li><li><a href="#">Linii de paleți</a></li></ul>
+</div>
+<div>
+<h5>Secundară și PAL/MDF</h5>
+<ul><li><a href="#">Mașini de aplicat cant</a></li><li><a href="#">CNC de găurit pe 6 laturi</a></li><li><a href="#">CNC nesting</a></li><li><a href="#">Mașini clasice de tâmplărie</a></li><li><a href="#">Linii de peleți</a></li><li><a href="#">Linii glulam și CLT</a></li></ul>
+</div>
+<div>
+<h5>Exclusivitate</h5>
+<ul><li><a href="#">Nanxing</a></li><li><a href="#">Primultini</a></li><li><a href="#">Paul Maschinenfabrik</a></li><li><a href="#">Baschild</a></li><li><a href="#">Giardina Group</a></li><li><a href="#">O.M.A.R.</a></li><li><a href="#">Nova Pellet</a></li><li><a href="#">Wravor</a></li></ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul class="ft-contact">
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><span>Str. Albinelor nr. 7, sector 4, 040431 București</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg><a href="tel:0732672147">0732.672.147</a></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><a href="mailto:office@woodexpert.ro">office@woodexpert.ro</a></li>
+<li style="gap:14px;padding-left:28px"><a href="#">Google Maps</a><a href="#">Waze</a></li>
+</ul>
+<h5 style="margin-top:28px">Companie</h5>
+<ul><li><a href="#">Despre noi</a></li><li><a href="#">Expoziții și târguri</a></li><li><a href="#">Wood Cademy</a></li><li><a href="#">Cataloage</a></li></ul>
+</div>
+</div>
+<div class="ft-mid">
+<div class="soc">
+<a href="#" aria-label="Facebook">Fb</a><a href="#" aria-label="Instagram">Ig</a><a href="#" aria-label="LinkedIn">In</a><a href="#" aria-label="YouTube">Yt</a><a href="#" aria-label="TikTok">Tk</a><a href="#" aria-label="Pinterest">Pi</a>
+</div>
+<div class="anpc"><a href="#">ANPC – Soluționarea alternativă a litigiilor</a><a href="#">Soluționarea online a litigiilor (UE)</a></div>
+</div>
+<div class="ft-bot">
+<span>© 2026 Wood Expert Industry SRL. Toate drepturile rezervate.</span>
+<nav aria-label="Legal"><a href="#">Termeni și condiții</a><a href="#">Politica cookie</a><a href="#">Sitemap</a><a href="#contact">Contact</a></nav>
+</div>
+</div>
+<div class="ft-word" aria-hidden="true">WOOD EXPERT</div>
+</footer>
+
+<a class="fab" href="#" aria-label="Scrie-ne pe WhatsApp"><span class="ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg></span><b>Scrie-ne pe WhatsApp</b></a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: null, drawer: false, drawerSec: null, slide: 0, tab: 'primara', faq: 0, region: 0 };
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ slide: (this.state.slide + 1) % 3 }), 6500);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  renderVals() {
+    const B = '/_blob/';
+    const IMG = {
+      hero: B + '39d3106cb94c3c9fb1a5404d422ec966', celula: B + '4c3b3ca5939c4aeff4c5d0efeda18830',
+      circular: B + '2e4ddaa2d0a0bf94c432f6ff512cff06', cnc: B + '317edb40a016dc3dac7b8579625c6bb1',
+      peleti: B + 'b75e162e458e1e13842d919cbf0a1586', cant: B + '0405caff5dcb9cf142879ada9a8ae153',
+      multilama: B + '9ad68033e3b153fa17d993b4b3b467c1'
+    };
+    const DATA = {
+      primara: {
+        label: 'Prelucrare primară', chip: 'Bușteni și cherestea', img: IMG.hero,
+        title: 'Fabrici de cherestea echipate complet',
+        text: 'Linii de debitare, multilame, optimizatoare și uscătoare de la Primultini, Paul și Baschild, integrate într-un singur flux.',
+        cats: [
+          { t: 'Linii debitare bușteni', n: 15 }, { t: 'Fierăstraie circulare multilamă', n: 15 },
+          { t: 'Optimizatoare și linii de sortare', n: 7 }, { t: 'Uscătoare cherestea', n: 5 },
+          { t: 'Cazane industriale', n: 5 }, { t: 'Tocătoare resturi lemnoase', n: 4 },
+          { t: 'Decojitoare bușteni', n: 3 }, { t: 'Instalații de exhaustare', n: 3 },
+          { t: 'Linii producție paleți', n: 3 }, { t: 'Camere de aburire', n: 2 }
+        ]
+      },
+      secundara: {
+        label: 'Prelucrare secundară', chip: 'Tâmplărie și biomasă', img: IMG.peleti,
+        title: 'Tâmplărie, prese, peleți, glulam și CLT',
+        text: 'De la mașini clasice de tâmplărie la linii complete de peleți și grinzi încleiate, dimensionate pe capacitatea ta.',
+        cats: [
+          { t: 'Mașini clasice de tâmplărie', n: 41 }, { t: 'Prese lemn și tâmplărie', n: 22 },
+          { t: 'Mașini de calibrat și șlefuit', n: 14 }, { t: 'Linii producție peleți', n: 11 },
+          { t: 'Fierăstraie panglică de tâmplărie', n: 10 }, { t: 'Linii producție glulam', n: 9 },
+          { t: 'Linii de îmbinat în dinți', n: 5 }, { t: 'Linii producție CLT', n: 3 },
+          { t: 'Prese brichete rumeguș', n: 2 }
+        ]
+      },
+      pal: {
+        label: 'PAL / MDF', chip: 'Nanxing · exclusivitate', img: IMG.celula,
+        title: 'Fabrici de mobilă PAL și MDF, linii complete Nanxing',
+        text: 'Formatizare, aplicare cant, găurire pe 6 laturi, nesting și finisare, într-un flux automatizat.',
+        cats: [
+          { t: 'Roboți de vopsire prin pulverizare', n: 19 }, { t: 'Mașini de aplicat cant', n: 16 },
+          { t: 'CNC de găurit pe 6 laturi', n: 11 }, { t: 'Circulare de formatizat în pachet', n: 8 },
+          { t: 'Mașini de uscare cu aer cald', n: 8 }, { t: 'CNC nesting', n: 4 },
+          { t: 'Circulare cu masă mobilă și incizor', n: 2 }
+        ]
+      }
+    };
+    const keys = ['primara', 'secundara', 'pal'];
+    const s = this.state;
+    const slidesSrc = [
+      { img: IMG.hero, eyebrow: 'Prelucrare primară · Primultini', t1: 'Fabrici de cherestea', t2: 'echipate complet.', short: 'Cherestea',
+        lead: 'De la buștean la cherestea sortată: proiectăm, livrăm, montăm și punem în funcțiune linia ta de debitare.', cta: 'Configurează linia de debitare', cta2: 'Proiecte finalizate' },
+      { img: IMG.celula, eyebrow: 'PAL și MDF · Nanxing', t1: 'Fabrici de mobilă', t2: 'complet automatizate.', short: 'PAL / MDF',
+        lead: 'Linii complete Nanxing: formatizare, mașini de aplicat cant, găurire pe 6 laturi și celule robotizate de nesting.', cta: 'Cere ofertă pentru o linie', cta2: 'Vezi montajele Nanxing' },
+      { img: IMG.peleti, eyebrow: 'Biomasă · Nova Pellet', t1: 'Linii de peleți', t2: 'industriale, la cheie.', short: 'Peleți',
+        lead: 'Transformă rumegușul și resturile lemnoase în venit, cu linii de peleți de până la 4 t/h și uscătoare cu bandă.', cta: 'Calculează capacitatea', cta2: 'Catalog utilaje' }
+    ];
+    const slides = slidesSrc.map((x, i) => ({ ...x, idx: i + 1, on: s.slide === i,
+      imgCls: s.slide === i ? 'on' : '', dotCls: s.slide === i ? 'dot on' : 'dot',
+      pick: () => { clearInterval(this.timer); this.setState({ slide: i }); this.timer = setInterval(() => this.setState({ slide: (this.state.slide + 1) % 3 }), 6500); } }));
+
+    const navItems = keys.map((k) => ({ label: DATA[k].label, cls: s.menu === k ? 'nav-btn on' : 'nav-btn', expanded: s.menu === k ? 'true' : 'false',
+      open: () => this.setState({ menu: k }) }));
+    const m = s.menu ? DATA[s.menu] : null;
+
+    const drawerItems = keys.map((k) => ({ label: DATA[k].label, cats: DATA[k].cats, open: s.drawerSec === k, sign: s.drawerSec === k ? '−' : '+',
+      toggle: () => this.setState({ drawerSec: s.drawerSec === k ? null : k }) }));
+
+    const tabs = keys.map((k) => ({ label: DATA[k].label, cls: s.tab === k ? 'tab on' : 'tab', sel: s.tab === k ? 'true' : 'false', pick: () => this.setState({ tab: k }) }));
+    const sol = DATA[s.tab];
+
+    const regionsSrc = [
+      { zone: 'Sud și Sud-Vest', name: 'Bogdan Fălcuța', ini: 'BF', tel: '+40731600333', telLabel: '0731 600 333',
+        counties: ['Caraș-Severin', 'Gorj', 'Mehedinți', 'Dolj', 'Olt', 'Teleorman', 'Giurgiu', 'București', 'Ilfov', 'Ialomița', 'Călărași'] },
+      { zone: 'Nord-Est și Sud-Est', name: 'Gheorghe Munteanu', ini: 'GM', tel: '+40723513193', telLabel: '0723 513 193',
+        counties: ['Suceava', 'Botoșani', 'Neamț', 'Iași', 'Bacău', 'Vaslui', 'Vrancea', 'Galați', 'Prahova', 'Buzău', 'Brăila', 'Tulcea', 'Constanța'] },
+      { zone: 'Centru', name: 'Ștefan Ciurea', ini: 'ȘC', tel: '+40721211883', telLabel: '0721 211 883',
+        counties: ['Mureș', 'Harghita', 'Sibiu', 'Brașov', 'Covasna', 'Argeș', 'Vâlcea', 'Dâmbovița'] },
+      { zone: 'Vest și Nord-Vest', name: 'Radu Munteanu', ini: 'RM', tel: '+40737023417', telLabel: '0737 023 417',
+        counties: ['Satu Mare', 'Maramureș', 'Bihor', 'Sălaj', 'Bistrița-Năsăud', 'Cluj', 'Arad', 'Alba', 'Timiș', 'Hunedoara'] }
+    ];
+    const regions = regionsSrc.map((r, i) => ({ ...r, idx: i + 1, cls: s.region === i ? 'reg on' : 'reg', pick: () => this.setState({ region: i }) }));
+
+    const faqSrc = [
+      { q: 'Ce tipuri de utilaje pot cumpăra de la Wood Expert?', a: 'Acoperim tot fluxul: prelucrare primară (debitare bușteni, multilame, optimizare, uscare), prelucrare secundară (tâmplărie, prese, peleți, glulam și CLT) și linii complete pentru mobilă din PAL și MDF, prin Nanxing.' },
+      { q: 'Cum pot finanța investiția?', a: 'Poți cumpăra prin leasing, prin proiecte cu fonduri europene sau din surse proprii. Te ajutăm cu documentația tehnică necesară dosarului de finanțare.' },
+      { q: 'Ce include prețul unui utilaj?', a: 'Transport gratuit, montaj și punere în funcțiune, instruirea personalului și garanție 12 luni. Service-ul continuă și în post-garanție.' },
+      { q: 'Aveți și utilaje second hand?', a: 'Da. În secțiunea Utilaje în stoc găsești utilaje second hand recondiționate și utilaje noi cu garanție, disponibile pentru livrare rapidă.' },
+      { q: 'Cât de repede ajunge un tehnician la mine?', a: 'Avem 25+ tehnicieni și ingineri de service și patru regiuni cu consultanți dedicați, ca să fim aproape de fabrica ta oriunde în România.' }
+    ];
+    const faq = faqSrc.map((f, i) => ({ ...f, open: s.faq === i, cls: s.faq === i ? 'fq on' : 'fq', toggle: () => this.setState({ faq: s.faq === i ? -1 : i }) }));
+
+    const clients = [
+      ['f9f11b2cf235d7fb7edda47b26734141', 'LEMS'], ['6964caa3fa9e17ab3ef2e4eb59364dad', 'Molidul Impex'], ['82bc7dab7a9a8fe5084aab2d1b17f47a', 'Barlinek'],
+      ['e9d03277c0d7ac70544f0d65191e7652', 'Genex'], ['4ae84aa3c066c7ad8edb1561e6ebf0a6', 'Expansion'], ['75d82e4645000309e5a424067c524c63', 'Pop France'],
+      ['f1392ef387f0d545762d7c1ef714a4c8', 'Stargate'], ['90055ba0b3818c03c8ed881a495ce374', 'Bucin Mob'], ['122bf0e96b11c6e34eee863ba40f6780', 'Romanel'],
+      ['32691f8dd1b2a6d7e48b0fe2d1fd4ec6', 'Martplast']
+    ].map(([id, alt]) => ({ src: B + id, alt }));
+
+    return {
+      navItems, megaOpen: !!m, megaTitle: m ? m.label : '', megaCats: m ? m.cats : [], megaImg: m ? m.img : '', megaChip: m ? m.chip : '', megaFeat: m ? m.title : '',
+      closeMenu: () => { if (this.state.menu) this.setState({ menu: null }); },
+      drawerOpen: s.drawer, drawerItems, openDrawer: () => this.setState({ drawer: true }), closeDrawer: () => this.setState({ drawer: false }),
+      slides,
+      experts: regionsSrc.map((r) => ({ name: r.name, ini: r.ini, zone: r.zone, tel: r.tel })),
+      clientsLoop: clients.concat(clients),
+      tabs, solImg: sol.img, solChip: sol.chip, solTitle: sol.title, solText: sol.text, solCats: sol.cats.slice(0, 8),
+      included: ['Transport gratuit', 'Montaj și punere în funcțiune', 'Instruirea personalului', 'Garanție 12 luni', 'Service și în post-garanție'],
+      projects: [
+        { img: IMG.cnc, tag: 'Montaj și testare', t: 'CNC de găurit pe 6 laturi Nanxing ND612DT', loc: 'Județul Tulcea' },
+        { img: IMG.cant, tag: 'Montaj și testare', t: 'Mașină de aplicat cant softforming NB875A', loc: 'Ungaria' },
+        { img: IMG.circular, tag: 'Montaj', t: 'Circular de tăiat în pachet NPC330s Servo', loc: 'Județul Mureș' },
+        { img: IMG.peleti, tag: 'Montaj complet', t: 'Linie de peleți de 4 t/h cu uscător cu bandă', loc: 'Județul Alba' },
+        { img: IMG.multilama, tag: 'Montaj nou', t: 'Multilamă automată Primultini DRF cu 6 pânze mobile', loc: 'Județul Suceava' },
+        { img: IMG.celula, tag: 'Studiu de caz', t: 'Celulă robotizată Nanxing pentru nesting și găurire', loc: 'Automatizare PAL / MDF' }
+      ],
+      producers: [
+        { src: B + 'c7cb8825d566ab64717a697983d7671b', name: 'Primultini', what: 'Italia · linii debitare bușteni' },
+        { src: B + 'afbf278d1a423a184d2d586d11e3dbaa', name: 'Paul Maschinenfabrik', what: 'Germania · multilame, optimizare' },
+        { src: B + 'f7d7ffa940ad0436ae9519086b0cf0f2', name: 'Baschild', what: 'Italia · uscătoare cherestea' },
+        { src: B + 'f533dc53225fce4142209ba9c487ba0d', name: 'Giardina Group', what: 'Italia · linii de finisare' },
+        { src: B + 'a73d1a3ec0f38991cec3e0ebf95fc2f0', name: 'O.M.A.R.', what: 'Italia · exhaustare' },
+        { src: B + 'f88f7e24635042bb90bac19de8c6472a', name: 'Nova Pellet', what: 'Italia · linii de peleți' },
+        { src: B + 'f1ee46fdca106156134f9ee971c5554a', name: 'Wravor', what: 'Slovenia · fierăstraie panglică bușteni' }
+      ],
+      regions, reg: regions[s.region],
+      faq,
+      noSubmit: (e) => { e.preventDefault(); }
+    };
+  }
+}
+</script>
+</body>
+</html>
