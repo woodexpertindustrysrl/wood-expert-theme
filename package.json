@@ -1,0 +1,23 @@
+{
+  "name": "wood-expert-theme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tema WordPress Wood Expert Industry (woodexpert.ro)",
+  "scripts": {
+    "build:css": "tailwindcss -i assets/css/src/main.css -o assets/css/theme.css --minify",
+    "build:js": "esbuild assets/js/src/main.js --bundle --minify --format=iife --target=es2019 --outfile=assets/js/theme.js",
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "tailwindcss -i assets/css/src/main.css -o assets/css/theme.css --watch",
+    "watch:js": "esbuild assets/js/src/main.js --bundle --format=iife --target=es2019 --outfile=assets/js/theme.js --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.5"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.17.5",
+    "@alpinejs/focus": "^3.17.5",
+    "alpinejs": "^3.17.5"
+  }
+}

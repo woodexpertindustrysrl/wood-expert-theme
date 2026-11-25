@@ -1,0 +1,272 @@
+/*
+ * Wood Expert – stiluri temă (Tailwind CSS v4)
+ * Tokenii provin din design/light.css. Build: npm run build:css
+ */
+@import "tailwindcss" source(none);
+
+@source "../../../*.php";
+@source "../../../inc/**/*.php";
+@source "../../../template-parts/**/*.php";
+@source "../../../templates/**/*.php";
+@source "../../../blocks/**/*.php";
+@source "../../js/src/**/*.js";
+
+@theme {
+  /* Paleta implicită Tailwind este eliminată: folosim doar culorile brandului (fără negru pur). */
+  --color-*: initial;
+  --color-white: #FFFFFF;
+  --color-alb: #F9F9F9;            /* alb cald */
+
+  --color-maro: #461D03;           /* text principal, secțiuni închise */
+  --color-maro-2: #5C2A0B;         /* hover pe maro */
+  --color-maro-3: #2B1102;         /* umbră / overlay */
+  --color-or: #F39438;             /* accent, CTA */
+  --color-or-50: #FEF4EA;
+  --color-or-100: #FDE3C8;
+  --color-or-600: #E58325;         /* bordură buton accent */
+  --color-or-400: #F7A452;         /* hover buton accent */
+  --color-or-ink: #9A5B1E;         /* portocaliu închis pentru text mic pe alb (contrast AA) */
+  --color-vd: #3FB353;             /* în stoc, bife */
+  --color-vd-50: #ECF8EE;
+  --color-vd-200: #CDEBD3;
+  --color-vd-700: #23812F;
+  --color-vd-800: #1E6E29;
+  --color-ol: #A6A867;
+  --color-cr: #E3DC95;
+
+  --color-sand-25: #FDFCF9;
+  --color-sand-50: #F9F8F4;
+  --color-sand-100: #F3F0E7;
+  --color-sand-200: #E9E4D6;
+  --color-line: #ECE8DD;
+
+  --color-tx: #461D03;
+  --color-tx-2: #6B4A35;
+  --color-mut: #7A5E4B;
+  --color-placeholder: #A08A7B;
+
+  --font-sans: "Inter Tight", system-ui, Arial, sans-serif;
+
+  --shadow-xs: 0 1px 2px rgba(70, 29, 3, .06);
+  --shadow-sm: 0 1px 3px rgba(70, 29, 3, .08), 0 1px 2px rgba(70, 29, 3, .05);
+  --shadow-lg: 0 12px 16px -4px rgba(70, 29, 3, .08), 0 4px 6px -2px rgba(70, 29, 3, .04);
+  --shadow-xl: 0 24px 48px -12px rgba(70, 29, 3, .18);
+
+  /* Breakpoint-uri din design: 760px (mobil) și 1180px (meniu complet). */
+  --breakpoint-tab: 761px;
+  --breakpoint-desk: 1181px;
+
+  --animate-drop: drop .2s ease;
+  --animate-slide: slide .25s ease;
+  --animate-rise: rise .3s ease;
+
+  @keyframes drop {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes slide {
+    from { transform: translateX(24px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-white);
+    color: var(--color-tx);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    overflow-x: clip; /* clip, nu hidden: nu strică header-ul sticky */
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--color-maro); text-decoration: none; }
+  a:hover { color: var(--color-maro-3); }
+  :focus-visible { outline: 2px solid var(--color-maro); outline-offset: 2px; border-radius: 4px; }
+  ::placeholder { color: var(--color-placeholder); }
+  [x-cloak] { display: none !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ---------- Componente reutilizabile ---------- */
+
+@utility wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  @variant tab { padding-inline: 32px; }
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font: 600 15px/1 var(--font-sans);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background .15s, box-shadow .15s, border-color .15s;
+  white-space: nowrap;
+  &:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--color-or-100); }
+}
+
+/* Buton principal: maro cu text alb */
+@utility btn-primary {
+  background: var(--color-maro);
+  color: var(--color-white);
+  border-color: var(--color-maro);
+  box-shadow: var(--shadow-xs), inset 0 0 0 1px rgba(255, 255, 255, .12), inset 0 -2px 0 rgba(43, 17, 2, .18);
+  &:hover { background: var(--color-maro-2); color: var(--color-white); }
+}
+
+/* Buton secundar: alb cu bordură */
+@utility btn-ghost {
+  background: var(--color-white);
+  color: var(--color-tx);
+  border-color: var(--color-sand-200);
+  box-shadow: var(--shadow-xs), inset 0 -2px 0 rgba(70, 29, 3, .05);
+  &:hover { background: var(--color-sand-50); color: var(--color-tx); }
+}
+
+/* Buton accent: portocaliu cu text maro (niciodată alb) */
+@utility btn-accent {
+  background: var(--color-or);
+  color: var(--color-maro);
+  border-color: var(--color-or-600);
+  box-shadow: var(--shadow-xs), inset 0 -2px 0 rgba(70, 29, 3, .12);
+  &:hover { background: var(--color-or-400); color: var(--color-maro); }
+}
+
+@utility ico-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-200);
+  color: var(--color-tx-2);
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  &:hover { background: var(--color-sand-50); color: var(--color-tx); }
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-maro);
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-200);
+  box-shadow: var(--shadow-xs);
+  padding: 4px 12px 4px 6px;
+  border-radius: 999px;
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+    background: var(--color-or);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--color-or-100);
+  }
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-200);
+  color: var(--color-maro);
+  box-shadow: var(--shadow-xs);
+}
+
+@utility icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+@utility field {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--color-sand-200);
+  background: var(--color-white);
+  color: var(--color-tx);
+  padding: 0 14px;
+  font: 500 15px var(--font-sans);
+  outline: none;
+  box-shadow: var(--shadow-xs);
+  &:focus { border-color: var(--color-or); box-shadow: 0 0 0 4px var(--color-or-100); }
+}
+
+/* Cuvântul decorativ din subsolul paginii (contur, nu logo). */
+@utility outline-word {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-sand-200);
+}
+
+/* Conținut editorial generic (index.php, pagini simple). */
+@utility prose-we {
+  color: var(--color-tx-2);
+  font-size: 17px;
+  & > * + * { margin-top: 1em; }
+  & h2, & h3 { color: var(--color-tx); letter-spacing: -.02em; line-height: 1.2; font-weight: 700; }
+  & h2 { font-size: 30px; margin-top: 1.6em; }
+  & h3 { font-size: 22px; margin-top: 1.4em; }
+  & a { text-decoration: underline; text-underline-offset: 2px; }
+  & ul { list-style: disc; padding-left: 1.25em; }
+  & ol { list-style: decimal; padding-left: 1.25em; }
+  & img { border-radius: 16px; height: auto; max-width: 100%; }
+}
+
+/* Ecran-reader only */
+@utility sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  &:focus {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: auto;
+    height: auto;
+    clip: auto;
+    z-index: 100;
+    padding: 12px 16px;
+    background: var(--color-white);
+    border: 1px solid var(--color-sand-200);
+    border-radius: 10px;
+    box-shadow: var(--shadow-xl);
+  }
+}

@@ -1,0 +1,12 @@
+# Fișiere care NU se urcă pe server odată cu tema
+.git
+.gitignore
+.distignore
+node_modules
+assets/css/src
+assets/js/src
+design
+docs
+CLAUDE.md
+package.json
+package-lock.json

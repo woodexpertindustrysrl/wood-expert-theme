@@ -1,0 +1,32 @@
+# Dependențe și build
+node_modules/
+vendor/
+*.log
+npm-debug.log*
+
+# Secrete: nu se comit niciodată
+.env
+.env.*
+wp-config.php
+*.pem
+*.ppk
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.key
+auth.json
+
+# Dump-uri și backup-uri
+*.sql
+*.sql.gz
+*.sql.zip
+*.wpress
+backups/
+
+# Sistem / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
